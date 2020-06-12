@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product\GetProductResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\GetUserByPasswordRequest.cs" />
+    <Compile Include="User\GetUserResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

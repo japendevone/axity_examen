@@ -41,7 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationException.cs" />
+    <Compile Include="ApplicationValidationErrorsException.cs" />
+    <Compile Include="ProjectionsExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExamService.Domain.Seed\ExamService.Domain.Seed.csproj">
+      <Project>{0d096ee9-46e7-474b-875a-9b5be62a4c4c}</Project>
+      <Name>ExamService.Domain.Seed</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamService.Infrastructure.Seed\ExamService.Infrastructure.Seed.csproj">
+      <Project>{24d619be-54af-419c-baab-f70cc29679c0}</Project>
+      <Name>ExamService.Infrastructure.Seed</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

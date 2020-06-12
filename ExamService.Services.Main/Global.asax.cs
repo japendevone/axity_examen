@@ -1,3 +1,4 @@
+using ExamService.Services.Main.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace ExamService.Services.Main
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            DependencyInjectionConfig.RegisterDependencies();
         }
     }
 }

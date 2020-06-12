@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +44,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\ProductProfile.cs" />
+    <Compile Include="Mapping\UserProfile.cs" />
+    <Compile Include="Product\Services\IProductApplicationService.cs" />
+    <Compile Include="Product\Services\ProductApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Services\IUserApplicationService.cs" />
+    <Compile Include="User\Services\UserApplicationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExamService.Application.Seed\ExamService.Application.Seed.csproj">
+      <Project>{71595634-2367-46bc-86ab-e07896d4751d}</Project>
+      <Name>ExamService.Application.Seed</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamService.Domain.Main\ExamService.Domain.Main.csproj">
+      <Project>{8b30accb-26e8-4ebf-ac4f-bb71e736193e}</Project>
+      <Name>ExamService.Domain.Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamService.Domain.Seed\ExamService.Domain.Seed.csproj">
+      <Project>{0d096ee9-46e7-474b-875a-9b5be62a4c4c}</Project>
+      <Name>ExamService.Domain.Seed</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamService.Infrastructure.Seed\ExamService.Infrastructure.Seed.csproj">
+      <Project>{24d619be-54af-419c-baab-f70cc29679c0}</Project>
+      <Name>ExamService.Infrastructure.Seed</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamService.Services.Main.DataContract\ExamService.Services.Main.DataContract.csproj">
+      <Project>{797fd7b4-9733-4610-a8de-e3c32b117d9e}</Project>
+      <Name>ExamService.Services.Main.DataContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
